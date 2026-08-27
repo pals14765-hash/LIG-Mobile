@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>L.I.G. Mobile World | Ghazipur</title>
+
+<meta name="description" content="L.I.G. Mobile World Ghazipur - Mobile phones, accessories, mobile repair, SIM and recharge services.">
+<meta name="keywords" content="LIG Mobile World, LIG Mobile Shop, mobile shop Ghazipur, mobile repair Ghazipur, mobile accessories">
+<meta name="robots" content="index, follow">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f5f8ff;
+  color:#101828;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#071322;
+  color:white;
+  padding:10px 5%;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+/* NAVBAR */
+nav{
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  min-height:75px;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#0866ff;
+}
+
+.menu{
+  display:flex;
+  gap:25px;
+}
+
+.menu a{
+  color:#101828;
+  font-weight:bold;
+}
+
+.menu a:hover{
+  color:#0866ff;
+}
+
+.call-btn{
+  background:#0866ff;
+  color:white;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  min-height:560px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #061a38 0%,
+      #0b3267df 45%,
+      #07172a80 100%
+    ),
+    url("shop.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  color:white;
+}
+
+.hero-content{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:70px 25px;
+}
+
+.welcome{
+  color:#8ec5ff;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.hero h1{
+  font-size:clamp(42px,7vw,72px);
+  line-height:1.1;
+  margin:15px 0;
+}
+
+.hero h1 span{
+  color:#2d8cff;
+}
+
+.hero p{
+  max-width:650px;
+  font-size:20px;
+  color:#e6efff;
+}
+
+.buttons{
+  margin-top:28px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:9px;
+  font-weight:bold;
+  background:#087cff;
+  color:white;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.whatsapp{
+  background:#20bd58;
+}
+
+.white-btn{
+  background:white;
+  color:#082044;
+}
+
+/* SECTIONS */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:38px;
+}
+
+.section-title p{
+  color:#64748b;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+}
+
+.service-card{
+  background:white;
+  padding:28px 16px;
+  border-radius:16px;
+  text-align:center;
+  border:1px solid #e5eaf2;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+}
+
+.service-icon{
+  font-size:45px;
+}
+
+.service-card h3{
+  margin:12px 0 5px;
+}
+
+.service-card p{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.shop-photo{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+.about h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.about h2 span{
+  color:#0866ff;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-top:25px;
+}
+
+.feature{
+  font-weight:bold;
+}
+
+/* CONTACT */
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1.2fr 1fr;
+  gap:20px;
+}
+
+.contact-box{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  border:1px solid #e5eaf2;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.contact-box h3{
+  margin-bottom:15px;
+}
+
+.contact-box p{
+  color:#475569;
+  margin:10px 0;
+}
+
+.map{
+  width:100%;
+  height:280px;
+  border:0;
+  border-radius:12px;
+}
+
+/* CTA */
+.cta{
+  background:#0866ff;
+  color:white;
+}
+
+.cta-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:25px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.phone-number{
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  background:#071322;
+  color:#dbe6f8;
+  padding:45px 20px 20px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:30px;
+}
+
+footer h3{
+  color:white;
+  margin-bottom:12px;
+}
+
+footer a{
+  display:block;
+  color:#b9c8dd;
+  margin:7px 0;
+}
+
+.copyright{
+  max-width:1200px;
+  margin:30px auto 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.15);
+  text-align:center;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .services{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about,
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .topbar{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .menu{
+    display:none;
+  }
+
+  .hero{
+    min-height:600px;
+  }
+
+  .hero-content{
+    padding:55px 20px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cta-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+
+  <div>
+    📍 Bhutahiya, Sichai Vibhag, Chauraha,
+    Tulsi Sagar, Ghazipur
+  </div>
+
+  <div>
+    📞 +91 91402 67697
+    &nbsp; | &nbsp;
+    🕐 10:00 AM – 10:00 PM
+  </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+<nav>
+
+  <div class="navbar">
+
+    <div class="logo">
+      📱 L.I.G.
+      <span>MOBILE WORLD</span>
+    </div>
+
+    <div class="menu">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About Us</a>
+
+      <a href="#services">Services</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+    <!-- CALL BUTTON -->
+    <a
+      class="call-btn"
+      href="tel:+919140267697"
+    >
+      📞 Call Now
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="welcome">
+      WELCOME TO
+    </div>
+
+    <h1>
+      L.I.G.
+      <span>MOBILE WORLD</span>
+    </h1>
+
+    <p>
+      Your trusted mobile shop in Ghazipur.
+      We provide quality smartphones,
+      accessories, mobile repair and useful
+      mobile services.
+    </p>
+
+    <div class="buttons">
+
+      <!-- CALL BUTTON -->
+      <a
+        class="btn"
+        href="tel:+919140267697"
+      >
+        📞 Call Now
+      </a>
+
+      <!-- WHATSAPP BUTTON -->
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/919140267697"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="container" id="services">
+
+  <div class="section-title">
+
+    <h2>Our Services</h2>
+
+    <p>
+      Everything you need for your mobile
+    </p>
+
+  </div>
+
+  <div class="services">
+
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>Mobile Phones</h3>
+      <p>
+        Latest smartphones from popular brands.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🎧</div>
+      <h3>Accessories</h3>
+      <p>
+        Chargers, cables, earphones,
+        covers and more.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Mobile Repair</h3>
+      <p>
+        Screen, battery, software
+        and other services.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📶</div>
+      <h3>SIM & Recharge</h3>
+      <p>
+        SIM cards and recharge
+        services available.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Tablets & More</h3>
+      <p>
+        Tablets and smart gadgets.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="container" id="about">
+
+  <div class="about">
+
+    <img
+      src="shop.jpg"
+      alt="L.I.G. Mobile World Ghazipur"
+      class="shop-photo"
+    >
+
+    <div>
+
+      <h2>
+        About
+        <span>L.I.G. Mobile World</span>
+      </h2>
+
+      <p>
+        L.I.G. Mobile World is an electronics
+        and mobile store located in Ghazipur.
+        We provide mobile phones, accessories
+        and helpful electronic solutions for
+        different requirements.
+      </p>
+
+      <div class="features">
+
+        <div class="feature">
+          ✓ Quality Products
+        </div>
+
+        <div class="feature">
+          ✓ Best Price
+        </div>
+
+        <div class="feature">
+          ✓ Customer Satisfaction
+        </div>
+
+        <div class="feature">
+          ✓ After-Sales Support
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="container" id="contact">
+
+  <div class="section-title">
+
+    <h2>Contact Us</h2>
+
+    <p>
+      Visit L.I.G. Mobile World
+    </p>
+
+  </div>
+
+
+  <div class="contact">
+
+
+    <!-- SHOP DETAILS -->
+    <div class="contact-box">
+
+      <h3>📍 Address</h3>
+
+      <p>
+        Hhf7+Pg3,
+        Bhutahiya,
+        Sichai Vibhag Chauraha,
+        Tulsi Sagar,
+        Ghazipur
+      </p>
+
+      <h3>📞 Phone</h3>
+
+      <p>
+        +91 91402 67697
+      </p>
+
+      <h3>🕐 Opening Hours</h3>
+
+      <p>
+        10:00 AM – 10:00 PM
+        <br>
+        All Days
+      </p>
+
+      <!-- CALL -->
+      <a
+        href="tel:+919140267697"
+        class="btn"
+      >
+        📞 Call Shop
+      </a>
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://wa.me/919140267697"
+        class="btn whatsapp"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+
+    <!-- GOOGLE MAP -->
+    <div class="contact-box">
+
+      <h3>📍 Find Us</h3>
+
+      <iframe
+        class="map"
+        loading="lazy"
+        src="https://www.google.com/maps?q=Hhf7%2BPg3%2C%20Bhutahiya%2C%20Sichai%20Vibhag%20Chauraha%2C%20Tulsi%20Sagar%2C%20Ghazipur&output=embed">
+      </iframe>
+
+    </div>
+
+
+    <!-- WHY CHOOSE US -->
+    <div class="contact-box">
+
+      <h3>
+        Why Choose Us?
+      </h3>
+
+      <p>✓ Genuine Products</p>
+
+      <p>✓ Affordable Prices</p>
+
+      <p>✓ Wide Range of Accessories</p>
+
+      <p>✓ Reliable Mobile Service</p>
+
+      <p>✓ Customer Support</p>
+
+      <!-- WHATSAPP -->
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/919140267697"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BOTTOM CTA -->
+<div class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+
+      <div>
+        Need Help? Call Us Now
+      </div>
+
+      <div class="phone-number">
+        +91 91402 67697
+      </div>
+
+    </div>
+
+
+    <!-- VISIT SHOP -->
+    <a
+      class="btn white-btn"
+      href="https://www.google.com/maps/search/?api=1&query=Hhf7%2BPg3%2C%20Bhutahiya%2C%20Sichai%20Vibhag%20Chauraha%2C%20Tulsi%20Sagar%2C%20Ghazipur"
+      target="_blank"
+      rel="noopener"
+    >
+      📍 Visit Our Shop
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h3>
+        L.I.G. MOBILE WORLD
+      </h3>
+
+      <p>
+        Your trusted mobile shop in Ghazipur.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Quick Links
+      </h3>
+
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Services
+      </h3>
+
+      <a href="#services">Mobile Phones</a>
+      <a href="#services">Accessories</a>
+      <a href="#services">Mobile Repair</a>
+      <a href="#services">SIM & Recharge</a>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Contact
+      </h3>
+
+      <!-- CALL -->
+      <a href="tel:+919140267697">
+        📞 +91 91402 67697
+      </a>
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://wa.me/919140267697"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp
+      </a>
+
+      <a href="#contact">
+        📍 Ghazipur, Uttar Pradesh
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 L.I.G. Mobile World.
+    All Rights Reserved.
+
+  </div>
+
+</footer>
+
+</body>
+</html>
